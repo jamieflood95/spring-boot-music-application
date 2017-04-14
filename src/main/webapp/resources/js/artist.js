@@ -1,11 +1,11 @@
 function getArtist(artist) {
 	
 	// find the artist id from songkick
-	var artistUrl = 'http://api.songkick.com/api/3.0/search/artists.json?query='+decodeURI(artist)+'&apikey=io09K9l3ebJxmxe2';
+	var artistUrl = 'http://api.songkick.com/api/3.0/search/artists.json?query='+decodeURI(artist)+'&apikey=API_KEY';
 	
 	$.getJSON(artistUrl, function(data) {
 		// find the artists upcoming gigs
-		var url = 'http://api.songkick.com/api/3.0/artists/'+data.resultsPage.results.artist["0"].id+'/calendar.json?apikey=io09K9l3ebJxmxe2'
+		var url = 'http://api.songkick.com/api/3.0/artists/'+data.resultsPage.results.artist["0"].id+'/calendar.json?apikey=API_KEY'
 		 $('.artistImage').append('<img class="artistImage" src="http://images.sk-static.com/images/media/profile_images/artists/'+data.resultsPage.results.artist["0"].id+'/huge_avatar"/>');
 		
 		getArtistEvents(url);
@@ -34,21 +34,3 @@ function getArtistEvents(url) {
 		  });
 	});
 }
-
-$(document).ready(function () {
-	$('#favouriteArtist').on('click', function (e) {
-		e.preventDefault();
-		$.ajax({
-            type : "GET",
-            url : "/favouriteartist",
-            //data : JSON.stringify(formData),
-            success : function(result) {
-                console.log(result);
-            },
-            error : function(e) {
-                alert("Error!")
-                console.log("ERROR: ", e);
-            }
-        });
-	})
-});

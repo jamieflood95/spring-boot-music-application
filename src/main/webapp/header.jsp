@@ -8,7 +8,7 @@
 <script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="${contextPath}/resources/js/location.js"></script>
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCzp07bx9bn3vClScv6veUUqRP_NFFiUG0"></script> 
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=API_KEY"></script> 
 
 
 <nav class="navbar navbar-inverse">

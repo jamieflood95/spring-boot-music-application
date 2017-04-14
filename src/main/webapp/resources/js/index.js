@@ -1,5 +1,5 @@
 function displayEventsNearYou(lat, lng) {
-	var url = 'http://api.songkick.com/api/3.0/events.json?location=geo:'+lat+','+lng+'&apikey=io09K9l3ebJxmxe2&per_page=30';
+	var url = 'http://api.songkick.com/api/3.0/events.json?location=geo:'+lat+','+lng+'&apikey=API_KEY&per_page=30';
 	
 	$.getJSON(url, function(data) {
 		  var events = data.resultsPage.results.event;
