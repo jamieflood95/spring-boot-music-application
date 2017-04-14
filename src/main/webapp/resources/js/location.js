@@ -2,13 +2,19 @@
 var geocoder;
 
 if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(success);
+    navigator.geolocation.getCurrentPosition(success, error);
 } 
 
 function success(position) {
     var lat = position.coords.latitude;
     var lng = position.coords.longitude;
     setLocation(lat, lng)
+    $("upcomingEventsHeading").css("display", "block");
+    $("concertsBySongkick").css("display", "block");
+}
+
+function error(position) {
+	$("div.locationError").css("display", "block");
 }
 
 function initialize() {

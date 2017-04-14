@@ -20,10 +20,18 @@
 <script>initialize()</script>
 
 <div class="container">
-<h2 class=upcomingEventsHeading">Upcoming events near you</h2>
-<div><img src="${contextPath}/resources/img/concerts-by-songkick.jpg" class="concertsBySongkick"/></div>
-<div id="upcomingEvents">
+<h2 class="upcomingEventsHeading">Upcoming events near you</h2>
 
+<div><img src="${contextPath}/resources/img/concerts-by-songkick.jpg" class="concertsBySongkick"/></div>
+
+<div class="locationError">
+
+<img src="${contextPath}/resources/img/enable-permissions.png"/><br><br>
+<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp; There has been an error finding your location. Please enable location permissions for this application
+
+</div>
+
+<div id="upcomingEvents">
 </div>
 </div>
 </body>

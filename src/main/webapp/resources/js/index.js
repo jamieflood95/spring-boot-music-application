@@ -5,7 +5,6 @@ function displayEventsNearYou(lat, lng) {
 		  var events = data.resultsPage.results.event;
 		  
 		  events.forEach(function(item, index, array) {
-			
 			var event_performer = array[index].performance[0].artist.displayName;
 			var event_venue = array[index].venue.displayName;
 			var event_city = array[index].location.city;
@@ -27,21 +26,5 @@ function displayEventsNearYou(lat, lng) {
 		  });
 	});
 }
-
-$(document).ready(function($) {
-$('artistName').click(function (event){ 
-    event.preventDefault(); 
-	$.ajax({
-	    type : "GET",
-	    url : "${pageContext.request.contextPath}/artist/" + $(document).find("artistName").text(),
-	    data : {
-	    "artist" : $(document).find("artistName").text(),
-	    },
-	    success: function(data){
-	    console.log("success");
-	    }
-	})
-})
-});
 
 	
